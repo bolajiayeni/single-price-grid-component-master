@@ -1,0 +1,165 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    font-weight: 400;
+
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    align-content: center;
+    background-color: hsl(204, 43%, 93%);
+
+}
+
+.container {
+
+    margin: 0 auto;
+    margin-bottom: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    width: 35%;
+
+    font-size: 1.6rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.panel__1 {
+    grid-column: 1 / -1;
+    padding: 3rem 4rem; 
+
+    background-color: #fff;
+}
+
+.panel__2 {
+    background-color: hsl(179, 62%, 39%);
+    padding: 3rem 4rem;
+    
+}
+
+.panel__3 {
+    background-color: hsl(179, 62%, 45%);
+    padding: 3rem 4rem;
+}
+
+.heading-1 {
+    color: hsl(179, 62%, 43%);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.heading-2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.heading-yellow {
+    color: hsl(71, 73%, 54%);
+}
+
+.heading-white {
+    color: hsl(204, 43%, 93%);
+}
+
+.text {
+    color: hsl(218, 22%, 67%)
+}
+
+.text-white {
+    color: hsl(204, 43%, 93%);
+}
+
+.price {
+    color: hsl(204, 43%, 93%);
+    font-size: 3rem;
+}
+
+.price__small {
+    color: hsl(204, 43%, 73%);
+    font-size: 1.4rem;
+}
+
+.btn {
+    font-size: inherit;
+    font-family: inherit;
+    color: #fff;
+    background-color: hsl(71, 73%, 54%);
+    
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1.5rem;
+
+    border: none;
+    border-radius: 5px;
+
+    transition: all .3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.btn:focus {
+    outline: none;
+    background-color: hsl(71, 73%, 34%);
+}
+
+.nav {
+    font-size: 1.4rem;
+    list-style: none;
+}
+
+.nav__link {
+    transition: all .2s;
+}
+
+.nav__link:hover,
+.nav__link:active {
+    transform: skew(-15deg) scale(1.05);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 93.75em) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 69.375em) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 51em) {
+
+    body {
+        height: auto;
+    }
+
+    .container {
+        margin-top: 10rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        
+    }
+}
+
